@@ -1,0 +1,17 @@
+//- V A R I A B L E S
+-var titulo = "Figuras Geométricas"
+
+//- M I X I N 
+//- C A R D - P O R T F O L I O 
+mixin card_portfolio(icon, title, date, image, url, github, text)
+	article.container__card
+		aside.container__card--header
+			img.container__card--header-photo(src=icon alt="profile photo")
+			hgroup
+				h2=title
+				h3=date
+		a(href=url target="_blank" rel="noopener noreferrer"): img.container__card--cover(src=image alt="cover")
+		p=text
+		footer
+			a.item-a(href=url target="_blank" rel="noopener noreferrer") Ver más
+			a.item-b(href=github target="_blank" rel="noopener noreferrer") GitHub

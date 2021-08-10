@@ -1,0 +1,191 @@
+@import "variables";
+
+.container {
+	width: 100%;
+
+	.flex {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.color1 {
+		background-color: $color__primario;
+	}
+
+	.color2 {
+		background-color: $color__secundario;
+	}
+
+	.color3 {
+		background-color: $color__terciario;
+	}
+
+	.w-25 {
+		width: 25%;
+	}
+
+	.w-50 {
+		width: 49%;
+		display: inline-block;
+	}
+
+	.w-73 {
+		width: 73%;
+	}
+
+	.w-100 {
+		width: 100%;
+	}
+
+	&__card {
+		width: 90%;
+		margin: 5%;
+		max-width: 450px;
+		border-radius: 5px;
+		box-shadow: 1px 1px 10px 1px gray;
+		padding: 0px;
+		color: $color__claro;
+
+		footer {
+			background-color: transparent;
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			padding: 3%;
+			justify-content: center;
+			align-items: center;
+
+			a {
+				font-weight: bolder;
+				text-transform: uppercase;
+
+				&:hover {
+					color: greenyellow;
+				}
+			}
+		}
+
+		p {
+			padding: 3%;
+			font-size: 1rem;
+		}
+
+		&--header {
+			display: flex;
+			padding: 2.5px;
+
+			&-photo {
+				margin: 5px;
+				width: 45px;
+				height: 45px;
+			}
+
+			hgroup {
+				padding: 3%;
+
+				h2 {
+					text-transform: uppercase;
+					font-size: 1.3rem;
+				}
+
+				h3 {
+					font-size: 0.9rem;
+				}
+			}
+		}
+
+		&--cover {
+			width: 90%;
+			height: auto;
+			margin: 0 5%;
+			padding-bottom: 5%;
+			font-size: 1.1rem;
+
+			label {
+				font-size: 1.1rem;
+				display: block;
+			}
+
+			input {
+				border-radius: 5px;
+				background-color: rgb(34 106 115 / 23%);
+				border: none;
+				margin: 3% 0;
+				padding: 3%;
+				font-size: 1.1rem;
+				font-weight: bold;
+				color: $color__claro;
+
+				&::placeholder {
+					font-weight: normal;
+					color: rgba(255, 255, 255, 0.5);
+				}
+
+				&:focus {
+					background-color: $color__tenue;
+				}
+			}
+
+			select {
+				border-radius: 5px;
+				background-color: rgb(34 106 115 / 23%);
+				border: none;
+				margin: 3% 0;
+				padding: 3%;
+				font-size: 1.1rem;
+				font-weight: bold;
+				outline: none;
+				color: $color__claro;
+
+				&:focus {
+					background-color: $color__tenueOscuro;
+				}
+			}
+
+			button {
+				margin: 1%;
+				padding: 3%;
+				border: none;
+				font-size: 1rem;
+				font-weight: bold;
+				border-radius: 10px;
+				background-color: $color__claro;
+				color: rgb(34 106 115 / 100%);
+
+				&:hover {
+					background-color: $color__tenue;
+					color: $color__claro;
+				}
+			}
+		}
+	}
+}
+
+// R E S P O N S I V E  D E S I G N 
+@media screen and (max-width:600px) {
+}
+
+@media screen and (min-width:600px) {
+	.container {
+		
+		&__card {
+			width: 45%;
+			margin: 2.5%;
+		}
+	}
+}
+
+@media screen and (min-width:900px) {
+	.container {
+		.flex {
+			width: 90%;
+			margin: 0 5%;
+		}
+
+		&__card {
+			width: 30%;
+			margin: 1%;
+		}
+	}
+}
