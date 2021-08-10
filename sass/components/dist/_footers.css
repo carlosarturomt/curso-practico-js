@@ -4,10 +4,17 @@ footer {
   font-size: 1.2rem;
   color: #FEFEFE;
   background-color: #019a679a;
+  padding: 3% 0;
 }
 footer a {
   color: #FEFEFE;
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    padding: 1% 0;
+  }
 }

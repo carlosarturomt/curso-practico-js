@@ -6,11 +6,21 @@ footer {
   font-size: 1.2rem;
   color: $color__claro;
   background-color: $color__primario;
+  padding: 3% 0;
 
-  a{
+  a {
     color: $color__claro;
+
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+// R E S P O N S I V E  D E S I G N 
+
+@media screen and (min-width:600px) {
+  footer {
+    padding: 1% 0;
   }
 }
