@@ -1,0 +1,151 @@
+.container {
+  width: 100%;
+}
+.container .flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container .color1 {
+  background-color: #019a679a;
+}
+.container .color2 {
+  background-color: rgba(151, 5, 5, 0.664);
+}
+.container .color3 {
+  background-color: rgba(104, 104, 199, 0.801);
+}
+.container .w-25 {
+  width: 25%;
+}
+.container .w-50 {
+  width: 49%;
+  display: inline-block;
+}
+.container .w-73 {
+  width: 73%;
+}
+.container .w-100 {
+  width: 100%;
+}
+.container__card {
+  width: 90%;
+  margin: 5%;
+  max-width: 450px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 1px gray;
+  padding: 0px;
+  color: #FEFEFE;
+}
+.container__card footer {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 3%;
+  justify-content: center;
+  align-items: center;
+}
+.container__card footer a {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.container__card footer a:hover {
+  color: greenyellow;
+}
+.container__card p {
+  padding: 3%;
+  font-size: 1rem;
+}
+.container__card--header {
+  display: flex;
+  padding: 2.5px;
+}
+.container__card--header-photo {
+  margin: 5px;
+  width: 45px;
+  height: 45px;
+}
+.container__card--header hgroup {
+  padding: 3%;
+}
+.container__card--header hgroup h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+.container__card--header hgroup h3 {
+  font-size: 0.9rem;
+}
+.container__card--cover {
+  width: 90%;
+  height: auto;
+  margin: 0 5%;
+  padding-bottom: 5%;
+  font-size: 1.1rem;
+}
+.container__card--cover label {
+  font-size: 1.1rem;
+  display: block;
+}
+.container__card--cover input {
+  border-radius: 5px;
+  background-color: rgba(34, 106, 115, 0.23);
+  border: none;
+  margin: 3% 0;
+  padding: 3%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #FEFEFE;
+}
+.container__card--cover input::placeholder {
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
+}
+.container__card--cover input:focus {
+  background-color: rgba(10, 10, 10, 0.185);
+}
+.container__card--cover select {
+  border-radius: 5px;
+  background-color: rgba(34, 106, 115, 0.23);
+  border: none;
+  margin: 3% 0;
+  padding: 3%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  outline: none;
+  color: #FEFEFE;
+}
+.container__card--cover select:focus {
+  background-color: rgba(10, 10, 10, 0.493);
+}
+.container__card--cover button {
+  margin: 1%;
+  padding: 3%;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #FEFEFE;
+  color: #226a73;
+}
+.container__card--cover button:hover {
+  background-color: rgba(10, 10, 10, 0.185);
+  color: #FEFEFE;
+}
+
+@media screen and (min-width: 600px) {
+  .container__card {
+    width: 45%;
+    margin: 2.5%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .container .flex {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .container__card {
+    width: 30%;
+    margin: 1%;
+  }
+}

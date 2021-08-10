@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html main {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: 0.9s ease all;
+  background: #ececec;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #222222;
+}
+
+input:focus {
+  outline: none;
+}
