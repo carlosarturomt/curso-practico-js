@@ -77,6 +77,29 @@
             </aside>
           </form>
         </article>
+        <article class="container__card color4">
+          <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/icons/rectangulo.png" alt="cuadrado"/>
+            <hgroup> 
+              <h2>Rectángulo</h2>
+              <h3>Calcula el área y perímetro</h3>
+            </hgroup>
+          </aside>
+          <form class="container__card--cover" action="">
+            <label for="inputRectangulo">¿Cuánto mide cada lado de tu rectángulo?</label>
+            <input class="w-50" id="inputRectanguloA" type="number" placeholder="Altura"/>
+            <input class="w-50" id="inputRectanguloB" type="number" placeholder="Base"/>
+            <select class="w-100" name="">
+              <option value="">mm</option>
+              <option value="">cm </option>
+              <option value="">m </option>
+              <option value="">km  </option>
+            </select>
+            <aside> 
+              <button type="button" onclick="calcularPerimetroRectangulo()">Calcular perímetro </button>
+              <button type="button" onclick="calcularAreaRectangulo()">Calcular área</button>
+            </aside>
+          </form>
+        </article>
         <article class="container__card color2">
           <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/icons/triangulo.png" alt="triangulo"/>
             <hgroup> 

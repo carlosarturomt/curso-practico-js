@@ -9,9 +9,20 @@ function areaCuadrado(lado) {
 console.groupEnd();
 
 
+// ..........Código del Rectángulo..........//
+console.group("Rectángulos");
+function perimetroRectangulo(altura, base) {
+  return (altura * 2)+(base * 2);
+}
+function areaRectangulo(altura, base) {
+  return altura * base;
+}
+console.groupEnd();
+
+
 // ...........Código del Triángulo...........//
 console.group("Triángulos");
-function alturaTrianguloEquilatero(ladoTriangulo1, baseTriangulo) {
+function alturaTrianguloEquilatero(ladoTriangulo1) {
   return Math.sqrt(ladoTriangulo1**2 -(ladoTriangulo1/2**2));
 }
 function alturaTrianguloIsoseles(ladoTriangulo1, baseTriangulo) {
@@ -68,6 +79,29 @@ function calcularAreaCuadrado(){
   alert("Área: " + area);
 }
 
+// Rectángulo
+function calcularPerimetroRectangulo(){
+  const inputA = document.getElementById("inputRectanguloA");
+  const valueA = Number(inputA.value);
+
+  const inputB = document.getElementById("inputRectanguloB");
+  const valueB = Number(inputB.value);
+
+  const perimetro = perimetroRectangulo(valueA, valueB);
+  alert("Perímetro: " + perimetro);
+}
+
+function calcularAreaRectangulo(){
+  const inputA = document.getElementById("inputRectanguloA");
+  const valueA = Number(inputA.value);
+
+  const inputB = document.getElementById("inputRectanguloB");
+  const valueB = Number(inputB.value);
+
+  const area = areaRectangulo(valueA, valueB);
+  alert("Área: " + area);
+}
+
 // Triángulo
 function calcularPerimetroTriangulo(){
   const inputA = document.getElementById("inputTrianguloA");
@@ -81,7 +115,7 @@ function calcularPerimetroTriangulo(){
 
   const perimetro = perimetroTriangulo(valueA, valueB, valueC);
   if (valueA==0, valueB==0, valueC==0) {
-    alert("Parece que no colocaste ningún dato, el resultado sería '0'."); 
+    alert("Parece que te faltan datos, es probable que el resultado no sea el esperado."); 
   }
   if(valueB==0, valueC==0){
     alert("Si tu tiángulo es quilatero, el perímetro es: " + valueA*3 + " si es isóseles, llena los demás datos.");
@@ -104,7 +138,7 @@ function calcularAreaTriangulo(){
   const altura2 = alturaTrianguloEquilatero(valueA);
   const area = areaTriangulo(valueC, valueD);
   if(valueD==0){
-    alert("Para calcular el ÁREA, necesitas la ALTURA, esta en un triángulo isóseles es de: " + altura1 + " y en un triángulo equilatero es de: " + altura2);
+    alert("Para calcular el ÁREA, necesitas la ALTURA, ésta en un triángulo isóseles es de: " + altura1 + " y en un triángulo equilatero es de: " + altura2);
   } else {
     alert("Area: " + area);
   }

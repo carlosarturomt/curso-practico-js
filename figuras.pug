@@ -41,6 +41,25 @@ block contenidos
           aside 
             button(type="button" onclick="calcularPerimetroCirculo()") Calcular circunferencia 
             button(type="button" onclick="calcularAreaCirculo()") Calcular área
+      //- R E C T A N G U L O
+      article.container__card.color4
+        aside.container__card--header
+          img.container__card--header-photo(src="../assets/icons/rectangulo.png" alt="cuadrado")
+          hgroup 
+            h2 Rectángulo
+            h3 Calcula el área y perímetro
+        form.container__card--cover(action="")
+          label(for="inputRectangulo") ¿Cuánto mide cada lado de tu rectángulo?
+          input#inputRectanguloA.w-50(type="number" placeholder="Altura")
+          input#inputRectanguloB.w-50(type="number" placeholder="Base")
+          select.w-100(name="")
+            option(value="") mm
+            option(value="") cm 
+            option(value="") m 
+            option(value="") km  
+          aside 
+            button(type="button" onclick="calcularPerimetroRectangulo()") Calcular perímetro 
+            button(type="button" onclick="calcularAreaRectangulo()") Calcular área
       //- T R Í A N G U L O 
       article.container__card.color2
         aside.container__card--header
