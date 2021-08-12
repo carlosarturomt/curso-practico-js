@@ -23,6 +23,24 @@ block contenidos
           aside 
             button(type="button" onclick="calcularPerimetroCuadrado()") Calcular perímetro 
             button(type="button" onclick="calcularAreaCuadrado()") Calcular área
+      //- C I R C U L O
+      article.container__card.color3
+        aside.container__card--header
+          img.container__card--header-photo(src="../assets/icons/circulo.png" alt="circulo")
+          hgroup 
+            h2 Circulo
+            h3 Calcula el área y perímetro
+        form.container__card--cover(action="")
+          label(for="inputCirculo") ¿Cuánto mide el radio de tu circulo?
+          input#inputCirculo.w-73(type="number")
+          select.w-25(name="")
+            option(value="") mm
+            option(value="") cm 
+            option(value="") m 
+            option(value="") km  
+          aside 
+            button(type="button" onclick="calcularPerimetroCirculo()") Calcular circunferencia 
+            button(type="button" onclick="calcularAreaCirculo()") Calcular área
       //- T R Í A N G U L O 
       article.container__card.color2
         aside.container__card--header
@@ -44,21 +62,3 @@ block contenidos
           aside 
             button(type="button" onclick="calcularPerimetroTriangulo()") Calcular perímetro 
             button(type="button" onclick="calcularAreaTriangulo()") Calcular área
-      //- C I R C U L O
-      article.container__card.color3
-        aside.container__card--header
-          img.container__card--header-photo(src="../assets/icons/circulo.png" alt="circulo")
-          hgroup 
-            h2 Circulo
-            h3 Calcula el área y perímetro
-        form.container__card--cover(action="")
-          label(for="inputCirculo") ¿Cuánto mide el radio de tu circulo?
-          input#inputCirculo.w-73(type="number")
-          select.w-25(name="")
-            option(value="") mm
-            option(value="") cm 
-            option(value="") m 
-            option(value="") km  
-          aside 
-            button(type="button" onclick="calcularPerimetroCirculo()") Calcular circunferencia 
-            button(type="button" onclick="calcularAreaCirculo()") Calcular área

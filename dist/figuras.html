@@ -55,6 +55,28 @@
             </aside>
           </form>
         </article>
+        <article class="container__card color3">
+          <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/icons/circulo.png" alt="circulo"/>
+            <hgroup> 
+              <h2>Circulo</h2>
+              <h3>Calcula el área y perímetro</h3>
+            </hgroup>
+          </aside>
+          <form class="container__card--cover" action="">
+            <label for="inputCirculo">¿Cuánto mide el radio de tu circulo?</label>
+            <input class="w-73" id="inputCirculo" type="number"/>
+            <select class="w-25" name="">
+              <option value="">mm</option>
+              <option value="">cm </option>
+              <option value="">m </option>
+              <option value="">km  </option>
+            </select>
+            <aside> 
+              <button type="button" onclick="calcularPerimetroCirculo()">Calcular circunferencia </button>
+              <button type="button" onclick="calcularAreaCirculo()">Calcular área</button>
+            </aside>
+          </form>
+        </article>
         <article class="container__card color2">
           <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/icons/triangulo.png" alt="triangulo"/>
             <hgroup> 
@@ -77,28 +99,6 @@
             <aside> 
               <button type="button" onclick="calcularPerimetroTriangulo()">Calcular perímetro </button>
               <button type="button" onclick="calcularAreaTriangulo()">Calcular área</button>
-            </aside>
-          </form>
-        </article>
-        <article class="container__card color3">
-          <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/icons/circulo.png" alt="circulo"/>
-            <hgroup> 
-              <h2>Circulo</h2>
-              <h3>Calcula el área y perímetro</h3>
-            </hgroup>
-          </aside>
-          <form class="container__card--cover" action="">
-            <label for="inputCirculo">¿Cuánto mide el radio de tu circulo?</label>
-            <input class="w-73" id="inputCirculo" type="number"/>
-            <select class="w-25" name="">
-              <option value="">mm</option>
-              <option value="">cm </option>
-              <option value="">m </option>
-              <option value="">km  </option>
-            </select>
-            <aside> 
-              <button type="button" onclick="calcularPerimetroCirculo()">Calcular circunferencia </button>
-              <button type="button" onclick="calcularAreaCirculo()">Calcular área</button>
             </aside>
           </form>
         </article>

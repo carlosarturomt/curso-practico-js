@@ -11,6 +11,12 @@ console.groupEnd();
 
 // ...........Código del Triángulo...........//
 console.group("Triángulos");
+function alturaTrianguloEquilatero(ladoTriangulo1, baseTriangulo) {
+  return Math.sqrt(ladoTriangulo1**2 -(ladoTriangulo1/2**2));
+}
+function alturaTrianguloIsoseles(ladoTriangulo1, baseTriangulo) {
+  return Math.sqrt(ladoTriangulo1**2  - baseTriangulo**2 / 4);
+}
 function perimetroTriangulo(ladoTriangulo1, ladoTriangulo2, baseTriangulo) {
   return ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
 }
@@ -51,7 +57,7 @@ function calcularPerimetroCuadrado(){
   const value = input.value;
 
   const perimetro = perimetroCuadrado(value);
-  alert(perimetro);
+  alert("Perímetro: " + perimetro);
 }
 
 function calcularAreaCuadrado(){
@@ -59,7 +65,7 @@ function calcularAreaCuadrado(){
   const value = input.value;
 
   const area = areaCuadrado(value);
-  alert(area);
+  alert("Área: " + area);
 }
 
 // Triángulo
@@ -74,18 +80,34 @@ function calcularPerimetroTriangulo(){
   const valueC = Number(inputC.value);
 
   const perimetro = perimetroTriangulo(valueA, valueB, valueC);
-  alert(perimetro);
+  if (valueA==0, valueB==0, valueC==0) {
+    alert("Parece que no colocaste ningún dato, el resultado sería '0'."); 
+  }
+  if(valueB==0, valueC==0){
+    alert("Si tu tiángulo es quilatero, el perímetro es: " + valueA*3 + " si es isóseles, llena los demás datos.");
+  } else {
+    alert("Perímetro: " + perimetro);
+  }
 }
 
 function calcularAreaTriangulo(){
+  const inputA = document.getElementById("inputTrianguloA");
+  const valueA = Number(inputA.value);
+
   const inputC = document.getElementById("inputTrianguloC");
   const valueC = Number(inputC.value);
 
   const inputD = document.getElementById("inputTrianguloD");
   const valueD = Number(inputD.value);
 
+  const altura1 = alturaTrianguloIsoseles(valueA, valueC);
+  const altura2 = alturaTrianguloEquilatero(valueA);
   const area = areaTriangulo(valueC, valueD);
-  alert(area);
+  if(valueD==0){
+    alert("Para calcular el ÁREA, necesitas la ALTURA, esta en un triángulo isóseles es de: " + altura1 + " y en un triángulo equilatero es de: " + altura2);
+  } else {
+    alert("Area: " + area);
+  }
 }
 
 // Circulo
@@ -94,7 +116,7 @@ function calcularPerimetroCirculo(){
   const value = input.value;
 
   const perimetro = perimetroCirculo(value);
-  alert(perimetro);
+  alert("Circunferencia: " + perimetro);
 }
 
 function calcularAreaCirculo(){
@@ -102,5 +124,5 @@ function calcularAreaCirculo(){
   const value = input.value;
 
   const area = areaCirculo(value);
-  alert(area);
+  alert("Área: " + area);
 }
