@@ -12,14 +12,14 @@ block contenidos
           hgroup 
             h2 Cuadrado
             h3 Calcula el área y perímetro
-        form.container__card--cover(action="")
+        form.container__card--cover(action="" name="formulCuadrado")
           label(for="inputCuadrado") ¿Cuánto mide cada lado de tu cuadrado?
           input#inputCuadrado.w-73(type="number")
-          select.w-25(name="")
-            option(value="") mm
-            option(value="") cm 
-            option(value="") m 
-            option(value="") km  
+          select.w-25(name="unidadesCuadrado")
+            option(value="mm") mm
+            option(value="cm") cm 
+            option(value="m") m 
+            option(value="km") km  
           aside 
             button(type="button" onclick="calcularPerimetroCuadrado()") Calcular perímetro 
             button(type="button" onclick="calcularAreaCuadrado()") Calcular área
@@ -30,14 +30,14 @@ block contenidos
           hgroup 
             h2 Circulo
             h3 Calcula el área y perímetro
-        form.container__card--cover(action="")
+        form.container__card--cover(action="" name="formulCirculo")
           label(for="inputCirculo") ¿Cuánto mide el radio de tu circulo?
           input#inputCirculo.w-73(type="number")
-          select.w-25(name="")
-            option(value="") mm
-            option(value="") cm 
-            option(value="") m 
-            option(value="") km  
+          select.w-25(name="unidadesCirculo")
+            option(value="mm") mm
+            option(value="cm") cm 
+            option(value="m") m 
+            option(value="km") km  
           aside 
             button(type="button" onclick="calcularPerimetroCirculo()") Calcular circunferencia 
             button(type="button" onclick="calcularAreaCirculo()") Calcular área
@@ -48,36 +48,36 @@ block contenidos
           hgroup 
             h2 Rectángulo
             h3 Calcula el área y perímetro
-        form.container__card--cover(action="")
+        form.container__card--cover(action="" name="formulRectangulo")
           label(for="inputRectangulo") ¿Cuánto mide cada lado de tu rectángulo?
           input#inputRectanguloA.w-50(type="number" placeholder="Altura")
           input#inputRectanguloB.w-50(type="number" placeholder="Base")
-          select.w-100(name="")
-            option(value="") mm
-            option(value="") cm 
-            option(value="") m 
-            option(value="") km  
+          select.w-100(name="unidadesRectangulo")
+            option(value="mm") mm
+            option(value="cm") cm 
+            option(value="m") m 
+            option(value="km") km  
           aside 
             button(type="button" onclick="calcularPerimetroRectangulo()") Calcular perímetro 
             button(type="button" onclick="calcularAreaRectangulo()") Calcular área
-      //- T R Í A N G U L O 
+      //- T R I Á N G U L O 
       article.container__card.color2
         aside.container__card--header
           img.container__card--header-photo(src="../assets/icons/triangulo.png" alt="triangulo")
           hgroup 
-            h2 Triangulo
+            h2 Triángulo
             h3 Calcula el área y perímetro
-        form.container__card--cover(action="")
-          label(for="inputTriangulo") ¿Cuánto mide cada lado de tu triangulo?
+        form.container__card--cover(action="" name="formulTriangulo")
+          label(for="inputTriangulo") ¿Cuánto mide cada lado de tu triángulo?
           input#inputTrianguloA.w-50(type="number" placeholder="Lado A")
           input#inputTrianguloB.w-50(type="number" placeholder="Lado B")
           input#inputTrianguloC.w-50(type="number" placeholder="Base")
           input#inputTrianguloD.w-50(type="number" placeholder="Altura")
-          select.w-100(name="")
-            option(value="") mm
-            option(value="") cm 
-            option(value="") m 
-            option(value="") km  
+          select.w-100(name="unidadesTriangulo")
+            option(value="mm") mm
+            option(value="cm") cm 
+            option(value="m") m 
+            option(value="km") km  
           aside 
             button(type="button" onclick="calcularPerimetroTriangulo()") Calcular perímetro 
             button(type="button" onclick="calcularAreaTriangulo()") Calcular área

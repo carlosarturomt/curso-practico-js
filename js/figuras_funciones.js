@@ -67,80 +67,92 @@ function calcularPerimetroCuadrado(){
   const input = document.getElementById("inputCuadrado");
   const value = input.value;
 
-  const perimetro = perimetroCuadrado(value);
-  alert("Perímetro: " + perimetro);
+  var indice = document.formulCuadrado.unidadesCuadrado.selectedIndex;
+  var valor = document.formulCuadrado.unidadesCuadrado.options[indice].value;
+
+  const perimetro = perimetroCuadrado(value, valor);
+  alert("Perímetro: " + perimetro + valor);
 }
 
 function calcularAreaCuadrado(){
   const input = document.getElementById("inputCuadrado");
   const value = input.value;
 
-  const area = areaCuadrado(value);
-  alert("Área: " + area);
+  var indice = document.formulCuadrado.unidadesCuadrado.selectedIndex;
+  var valor = document.formulCuadrado.unidadesCuadrado.options[indice].value;
+
+  const area = areaCuadrado(value, valor);
+  alert("Área: " + area + valor + "²");
 }
 
 // Rectángulo
 function calcularPerimetroRectangulo(){
   const inputA = document.getElementById("inputRectanguloA");
   const valueA = Number(inputA.value);
-
   const inputB = document.getElementById("inputRectanguloB");
   const valueB = Number(inputB.value);
 
-  const perimetro = perimetroRectangulo(valueA, valueB);
-  alert("Perímetro: " + perimetro);
+  var indice = document.formulRectangulo.unidadesRectangulo.selectedIndex;
+  var valor = document.formulRectangulo.unidadesRectangulo.options[indice].value;
+
+  const perimetro = perimetroRectangulo(valueA, valueB, valor);
+  alert("Perímetro: " + perimetro + valor);
 }
 
 function calcularAreaRectangulo(){
   const inputA = document.getElementById("inputRectanguloA");
   const valueA = Number(inputA.value);
-
   const inputB = document.getElementById("inputRectanguloB");
   const valueB = Number(inputB.value);
 
-  const area = areaRectangulo(valueA, valueB);
-  alert("Área: " + area);
+  var indice = document.formulRectangulo.unidadesRectangulo.selectedIndex;
+  var valor = document.formulRectangulo.unidadesRectangulo.options[indice].value;
+
+  const area = areaRectangulo(valueA, valueB, valor);
+  alert("Área: " + area + valor + "²");
 }
 
 // Triángulo
 function calcularPerimetroTriangulo(){
   const inputA = document.getElementById("inputTrianguloA");
   const valueA = Number(inputA.value);
-
   const inputB = document.getElementById("inputTrianguloB");
   const valueB = Number(inputB.value);
-
   const inputC = document.getElementById("inputTrianguloC");
   const valueC = Number(inputC.value);
+  
+  var indice = document.formulTriangulo.unidadesTriangulo.selectedIndex;
+  var valor = document.formulTriangulo.unidadesTriangulo.options[indice].value;
 
-  const perimetro = perimetroTriangulo(valueA, valueB, valueC);
+  const perimetro = perimetroTriangulo(valueA, valueB, valueC, valor);
   if (valueA==0, valueB==0, valueC==0) {
     alert("Parece que te faltan datos, es probable que el resultado no sea el esperado."); 
   }
   if(valueB==0, valueC==0){
-    alert("Si tu tiángulo es quilatero, el perímetro es: " + valueA*3 + " si es isóseles, llena los demás datos.");
+    alert("Si tu triángulo es quilatero, el perímetro es: " + valueA*3 + valor + " si es isóseles, llena los demás datos.");
   } else {
-    alert("Perímetro: " + perimetro);
+    alert("Perímetro: " + perimetro + valor);
   }
 }
 
 function calcularAreaTriangulo(){
   const inputA = document.getElementById("inputTrianguloA");
   const valueA = Number(inputA.value);
-
   const inputC = document.getElementById("inputTrianguloC");
   const valueC = Number(inputC.value);
-
   const inputD = document.getElementById("inputTrianguloD");
   const valueD = Number(inputD.value);
+
+  var indice = document.formulTriangulo.unidadesTriangulo.selectedIndex;
+  var valor = document.formulTriangulo.unidadesTriangulo.options[indice].value;
 
   const altura1 = alturaTrianguloIsoseles(valueA, valueC);
   const altura2 = alturaTrianguloEquilatero(valueA);
   const area = areaTriangulo(valueC, valueD);
   if(valueD==0){
-    alert("Para calcular el ÁREA, necesitas la ALTURA, ésta en un triángulo isóseles es de: " + altura1 + " y en un triángulo equilatero es de: " + altura2);
+    alert("Para calcular el ÁREA, necesitas la ALTURA, ésta en un triángulo isóseles es de: " + altura1 + valor + " y en un triángulo equilatero es de: " + altura2 + valor);
   } else {
-    alert("Area: " + area);
+    alert("Area: " + area + valor + "²");
   }
 }
 
@@ -149,14 +161,20 @@ function calcularPerimetroCirculo(){
   const input = document.getElementById("inputCirculo");
   const value = input.value;
 
-  const perimetro = perimetroCirculo(value);
-  alert("Circunferencia: " + perimetro);
+  var indice = document.formulCirculo.unidadesCirculo.selectedIndex;
+  var valor = document.formulCirculo.unidadesCirculo.options[indice].value;
+
+  const perimetro = perimetroCirculo(value, valor);
+  alert("Circunferencia: " + perimetro + valor);
 }
 
 function calcularAreaCirculo(){
   const input = document.getElementById("inputCirculo");
   const value = input.value;
 
+  var indice = document.formulCirculo.unidadesCirculo.selectedIndex;
+  var valor = document.formulCirculo.unidadesCirculo.options[indice].value;
+
   const area = areaCirculo(value);
-  alert("Área: " + area);
+  alert("Área: " + area + valor + "²");
 }
