@@ -230,6 +230,7 @@ footer a:hover {
 }
 
 .container__inf {
+  width: 100%;
   margin: 5%;
 }
 .container__inf h2 {
