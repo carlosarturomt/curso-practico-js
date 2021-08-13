@@ -228,3 +228,33 @@ footer a:hover {
 .hidden {
   display: none;
 }
+
+.container__inf {
+  margin: 5%;
+}
+.container__inf h2 {
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 0px 5px #019a679a;
+  font-size: 1.8rem;
+}
+.container__inf p {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+.container__inf img {
+  width: 100%;
+}
+.container__inf a {
+  text-shadow: 3px 0px 5px #019a679a;
+}
+.container__inf a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 900px) {
+  .container__inf img {
+    width: 60%;
+    margin: 0 20%;
+  }
+}

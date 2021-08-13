@@ -14,3 +14,45 @@
 .hidden {
   display: none;
 }
+
+.container {
+  &__inf {
+    margin: 5%;
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 3px 0px 5px $color__primario;
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    a {
+      text-shadow: 3px 0px 5px $color__primario;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// R E S P O N S I V E
+@media screen and (min-width:900px) {
+  .container {
+    &__inf {
+      img {
+        width: 60%;
+        margin: 0 20%;
+      }
+    }
+  }
+}
