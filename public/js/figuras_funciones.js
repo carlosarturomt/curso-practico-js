@@ -175,7 +175,7 @@ function calcularAreaTriangulo(){
   if(valueD==0){
     resultTriangulo.innerText = "Para calcular el ÁREA, necesitas la ALTURA, ésta en un triángulo isóseles es de: " + altura1.toFixed(3) + valor + " y en un triángulo equilatero es de: " + altura2.toFixed(3) + valor;
   } else {
-    resultTriangulo.innerText = "Area: " + area + valor + "²";
+    resultTriangulo.innerText = "Area: " + area.toFixed(3) + valor + "²";
   }
   if(valueC==0){
     resultTriangulo.innerText = "Para calcular el ÁREA, necesitas la ALTURA, ésta en un triángulo equilatero es de: " + altura2.toFixed(3) + valor + " y para un triángulo isóseles necesitas tener la BASE";
