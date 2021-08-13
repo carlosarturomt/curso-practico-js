@@ -74,7 +74,9 @@ function calcularPerimetroCuadrado() {
   var indice = document.formulCuadrado.unidadesCuadrado.selectedIndex;
   var valor = document.formulCuadrado.unidadesCuadrado.options[indice].value;
   var perimetro = perimetroCuadrado(value, valor);
-  alert("Perímetro: " + perimetro + valor);
+  var resultCuadrado = document.getElementById("resultCuadrado");
+  resultCuadrado.innerText = "Perímetro: " + perimetro.toFixed(3) + valor;
+  resultCuadrado.classList.add('show'); // alert("Perímetro: " + perimetro + valor);
 }
 
 function calcularAreaCuadrado() {
@@ -83,7 +85,9 @@ function calcularAreaCuadrado() {
   var indice = document.formulCuadrado.unidadesCuadrado.selectedIndex;
   var valor = document.formulCuadrado.unidadesCuadrado.options[indice].value;
   var area = areaCuadrado(value, valor);
-  alert("Área: " + area + valor + "²");
+  var resultCuadrado = document.getElementById("resultCuadrado");
+  resultCuadrado.innerText = "Área: " + area.toFixed(3) + valor + "²";
+  resultCuadrado.classList.add('show'); // alert("Área: " + area + valor + "²");
 } // Rectángulo
 
 
@@ -95,7 +99,9 @@ function calcularPerimetroRectangulo() {
   var indice = document.formulRectangulo.unidadesRectangulo.selectedIndex;
   var valor = document.formulRectangulo.unidadesRectangulo.options[indice].value;
   var perimetro = perimetroRectangulo(valueA, valueB, valor);
-  alert("Perímetro: " + perimetro + valor);
+  var resultRectangulo = document.getElementById("resultRectangulo");
+  resultRectangulo.innerText = "Perímetro: " + perimetro.toFixed(3) + valor;
+  resultRectangulo.classList.add('show'); // alert("Perímetro: " + perimetro + valor);
 }
 
 function calcularAreaRectangulo() {
@@ -106,7 +112,9 @@ function calcularAreaRectangulo() {
   var indice = document.formulRectangulo.unidadesRectangulo.selectedIndex;
   var valor = document.formulRectangulo.unidadesRectangulo.options[indice].value;
   var area = areaRectangulo(valueA, valueB, valor);
-  alert("Área: " + area + valor + "²");
+  var resultRectangulo = document.getElementById("resultRectangulo");
+  resultRectangulo.innerText = "Área: " + area.toFixed(3) + valor + "²";
+  resultRectangulo.classList.add('show'); // alert("Área: " + area + valor + "²");
 } // Triángulo
 
 
@@ -120,15 +128,15 @@ function calcularPerimetroTriangulo() {
   var indice = document.formulTriangulo.unidadesTriangulo.selectedIndex;
   var valor = document.formulTriangulo.unidadesTriangulo.options[indice].value;
   var perimetro = perimetroTriangulo(valueA, valueB, valueC, valor);
-
-  if (valueA == 0, valueB == 0, valueC == 0) {
-    alert("Parece que te faltan datos, es probable que el resultado no sea el esperado.");
-  }
+  var resultTriangulo = document.getElementById("resultTriangulo");
+  resultTriangulo.classList.add('show'); // if (valueA==0, valueB==0, valueC==0) {
+  //   alert("Parece que te faltan datos, es probable que el resultado no sea el esperado."); 
+  // }
 
   if (valueB == 0, valueC == 0) {
-    alert("Si tu triángulo es quilatero, el perímetro es: " + valueA * 3 + valor + " si es isóseles, llena los demás datos.");
+    resultTriangulo.innerText = "Si tu triángulo es equilatero, el perímetro es: " + valueA * 3 + valor + " si es isóseles, llena los demás datos.";
   } else {
-    alert("Perímetro: " + perimetro + valor);
+    resultTriangulo.innerText = "Perímetro: " + perimetro.toFixed(3) + valor;
   }
 }
 
@@ -144,11 +152,17 @@ function calcularAreaTriangulo() {
   var altura1 = alturaTrianguloIsoseles(valueA, valueC);
   var altura2 = alturaTrianguloEquilatero(valueA);
   var area = areaTriangulo(valueC, valueD);
+  var resultTriangulo = document.getElementById("resultTriangulo");
+  resultTriangulo.classList.add('show');
 
   if (valueD == 0) {
-    alert("Para calcular el ÁREA, necesitas la ALTURA, ésta en un triángulo isóseles es de: " + altura1 + valor + " y en un triángulo equilatero es de: " + altura2 + valor);
+    resultTriangulo.innerText = "Para calcular el ÁREA, necesitas la ALTURA, ésta en un triángulo isóseles es de: " + altura1.toFixed(3) + valor + " y en un triángulo equilatero es de: " + altura2.toFixed(3) + valor;
   } else {
-    alert("Area: " + area + valor + "²");
+    resultTriangulo.innerText = "Area: " + area + valor + "²";
+  }
+
+  if (valueC == 0) {
+    resultTriangulo.innerText = "Para calcular el ÁREA, necesitas la ALTURA, ésta en un triángulo equilatero es de: " + altura2.toFixed(3) + valor + " y para un triángulo isóseles necesitas tener la BASE";
   }
 } // Circulo
 
@@ -159,7 +173,9 @@ function calcularPerimetroCirculo() {
   var indice = document.formulCirculo.unidadesCirculo.selectedIndex;
   var valor = document.formulCirculo.unidadesCirculo.options[indice].value;
   var perimetro = perimetroCirculo(value, valor);
-  alert("Circunferencia: " + perimetro + valor);
+  var resultCirculo = document.getElementById("resultCirculo");
+  resultCirculo.innerText = "Circunferencia: " + perimetro.toFixed(3) + valor;
+  resultCirculo.classList.add('show'); // alert("Circunferencia: " + perimetro.toFixed(3) + valor);
 }
 
 function calcularAreaCirculo() {
@@ -168,5 +184,7 @@ function calcularAreaCirculo() {
   var indice = document.formulCirculo.unidadesCirculo.selectedIndex;
   var valor = document.formulCirculo.unidadesCirculo.options[indice].value;
   var area = areaCirculo(value);
-  alert("Área: " + area + valor + "²");
+  var resultCirculo = document.getElementById("resultCirculo");
+  resultCirculo.innerText = "Área: " + area.toFixed(3) + valor + "²";
+  resultCirculo.classList.add('show'); // alert("Área: " + area.toFixed(3) + valor + "²");
 }

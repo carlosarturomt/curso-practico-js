@@ -23,6 +23,7 @@ block contenidos
           aside 
             button(type="button" onclick="calcularPerimetroCuadrado()") Calcular perímetro 
             button(type="button" onclick="calcularAreaCuadrado()") Calcular área
+            p.hidden#resultCuadrado.w-100
       //- C I R C U L O
       article.container__card.color3
         aside.container__card--header
@@ -41,6 +42,7 @@ block contenidos
           aside 
             button(type="button" onclick="calcularPerimetroCirculo()") Calcular circunferencia 
             button(type="button" onclick="calcularAreaCirculo()") Calcular área
+            p.hidden#resultCirculo.w-100
       //- R E C T A N G U L O
       article.container__card.color4
         aside.container__card--header
@@ -60,6 +62,7 @@ block contenidos
           aside 
             button(type="button" onclick="calcularPerimetroRectangulo()") Calcular perímetro 
             button(type="button" onclick="calcularAreaRectangulo()") Calcular área
+            p.hidden#resultRectangulo.w-100
       //- T R I Á N G U L O 
       article.container__card.color2
         aside.container__card--header
@@ -80,4 +83,7 @@ block contenidos
             option(value="km") km  
           aside 
             button(type="button" onclick="calcularPerimetroTriangulo()") Calcular perímetro 
-            button(type="button" onclick="calcularAreaTriangulo()") Calcular área
+            button(type="button" onclick="calcularAreaTriangulo()") Calcular área   
+            p.hidden#resultTriangulo.w-100
+
+  script(src="../js/figuras_funciones.js")

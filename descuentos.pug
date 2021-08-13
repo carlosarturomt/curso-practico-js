@@ -1,0 +1,24 @@
+extend components/plantilla.pug
+block contenidos
+  header 
+    h1=titulos[1]
+    p Resultado del segundo taller del curso práctico de JavaScript
+  main.container
+    section.flex
+      //- P R E C I O - C O N - D E S C U E N T O
+      article.container__card.color1
+        aside.container__card--header
+          img.container__card--header-photo(src="../assets/icons/calculator.png" alt="cuadrado")
+          hgroup 
+            h2 Regla de Tres
+            h3 Calcular el precio con descuento
+        form.container__card--cover(action="" name="")
+          label(for="inputPrice") Escribe el precio de tu producto:
+          input#inputPrice.w-100(type="number" placeholder="$$$")
+          label(for="inputDiscount") Escribe el descuento de tu producto
+          input#inputDiscount.w-100(type="number" placeholder="Descuento%")
+          aside
+            button(type="button" onclick="onClickButtonPriceDiscount()") Calcular 
+            p#resultPrice.w-100
+
+  script(src="../js/descuentos.js")

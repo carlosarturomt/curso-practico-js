@@ -19,7 +19,7 @@
     <meta itemprop="image" content="https://static.platzi.com/media/landing-projects/proyecto-practicoJS.png"/>
     <meta name="twitter:image" content="https://static.platzi.com/media/landing-projects/proyecto-practicoJS.png"/>
     <meta itemprop="image" content="https://static.platzi.com/media/landing-projects/proyecto-practicoJS.png"/>
-    <title>Figuras | Curso Pŕactico JavaScript</title>
+    <title>Curso Pŕactico JavaScript | Resultados</title>
     <link rrel="image_src" href="https://static.platzi.com/media/landing-projects/proyecto-practicoJS.png"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
@@ -52,6 +52,7 @@
             <aside> 
               <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perímetro </button>
               <button type="button" onclick="calcularAreaCuadrado()">Calcular área</button>
+              <p class="hidden w-100" id="resultCuadrado"></p>
             </aside>
           </form>
         </article>
@@ -74,6 +75,7 @@
             <aside> 
               <button type="button" onclick="calcularPerimetroCirculo()">Calcular circunferencia </button>
               <button type="button" onclick="calcularAreaCirculo()">Calcular área</button>
+              <p class="hidden w-100" id="resultCirculo"></p>
             </aside>
           </form>
         </article>
@@ -97,6 +99,7 @@
             <aside> 
               <button type="button" onclick="calcularPerimetroRectangulo()">Calcular perímetro </button>
               <button type="button" onclick="calcularAreaRectangulo()">Calcular área</button>
+              <p class="hidden w-100" id="resultRectangulo"></p>
             </aside>
           </form>
         </article>
@@ -121,12 +124,14 @@
             </select>
             <aside> 
               <button type="button" onclick="calcularPerimetroTriangulo()">Calcular perímetro </button>
-              <button type="button" onclick="calcularAreaTriangulo()">Calcular área</button>
+              <button type="button" onclick="calcularAreaTriangulo()">Calcular área   </button>
+              <p class="hidden w-100" id="resultTriangulo"></p>
             </aside>
           </form>
         </article>
       </section>
     </main>
+    <script src="../js/figuras_funciones.js"></script>
     <footer>
       <article> 
         <h5><span>&copy</span><span>2021</span><a href="https://platzi.com/clases/javascript-practico/" target="_blank" rel="noopener"> <span>CursoPraćticoJS</span></a></h5>
@@ -134,6 +139,5 @@
       </article>
     </footer>
   </body>
-  <script src="../js/figuras_funciones.js"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" rossorigin="anonymous" aria-label="Dark Theme"></script>
 </html>

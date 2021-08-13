@@ -27,6 +27,33 @@
     <link rel="stylesheet" href="../sass/dist/styles.css"/>
   </head>
   <body>
+    <header> 
+      <h1>Porcentajes y Descuentos</h1>
+      <p>Resultado del segundo taller del curso práctico de JavaScript</p>
+    </header>
+    <main class="container">
+      <section class="flex">
+        <article class="container__card color1">
+          <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/icons/calculator.png" alt="cuadrado"/>
+            <hgroup> 
+              <h2>Regla de Tres</h2>
+              <h3>Calcular el precio con descuento</h3>
+            </hgroup>
+          </aside>
+          <form class="container__card--cover" action="" name="">
+            <label for="inputPrice">Escribe el precio de tu producto:</label>
+            <input class="w-100" id="inputPrice" type="number" placeholder="$$$"/>
+            <label for="inputDiscount">Escribe el descuento de tu producto</label>
+            <input class="w-100" id="inputDiscount" type="number" placeholder="Descuento%"/>
+            <aside>
+              <button type="button" onclick="onClickButtonPriceDiscount()">Calcular </button>
+              <p class="w-100" id="resultPrice"></p>
+            </aside>
+          </form>
+        </article>
+      </section>
+    </main>
+    <script src="../js/descuentos.js"></script>
     <footer>
       <article> 
         <h5><span>&copy</span><span>2021</span><a href="https://platzi.com/clases/javascript-practico/" target="_blank" rel="noopener"> <span>CursoPraćticoJS</span></a></h5>

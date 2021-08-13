@@ -1,4 +1,16 @@
 @import "components/globales";
 @import "components/headers";
 @import "components/cards";
-@import "components/footers"
+@import "components/footers";
+
+.show {
+  text-align: center;
+  display: inherit !important;
+  margin-top: 1rem;
+  border-radius: 10px;
+  border: $color__tenueOscuro solid 3px;
+}
+
+.hidden {
+  display: none;
+}
