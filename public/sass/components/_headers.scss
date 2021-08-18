@@ -1,3 +1,69 @@
+@import "variables";
+
 header {
-  margin: 1% 5%;
+  margin-bottom: 1rem;
+  height: 60px;
+
+  img {
+    width: 2rem;
+    margin-right: 5px;
+  }
+
+  a {
+    p {
+      color: #226a73;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
+
+  a,
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul {
+    li {
+      font-size: 1.2rem;
+
+      a {
+        color: white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  nav {
+    padding: 0 3%;
+    background-color: $color__primario;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.equiv {
+  font-size: 3rem;
+  color: #226a73;
+
+  &:hover {
+    cursor: pointer;
+    color: #00090a;
+  }
+}
+
+.toggle {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 3%;
+  border-radius: 5px;
+  line-height: 2rem;
+  background-color: #226a73;
 }

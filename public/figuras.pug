@@ -2,10 +2,10 @@ extend components/plantilla.pug
 block contenidos
   +head("Calcula Perímetros y Áreas.", "https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/figuras.jpg", "Calculadora de Perímetros y Áreas | WebMath")
   body 
-    header 
+    +header 
+    main.container
       h1=titulos[0]
       p Resultado del primer taller del curso práctico de JavaScript
-    main.container
       section.flex
         //- C U A D R A D O
         article.container__card.color1

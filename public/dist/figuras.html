@@ -28,10 +28,23 @@
   </head>
   <body> 
     <header> 
-      <h1>Figuras Geométricas</h1>
-      <p>Resultado del primer taller del curso práctico de JavaScript</p>
+      <nav x-data="{ open: false }">
+        <div class="flex"><a href="../../index"> 
+            <p>WebMath</p></a></div>
+        <div class="equiv" @click="open = true">&equiv;</div>
+        <div class="toggle" x-show="open" @click.away="open = false">
+          <ul>
+            <li><a href="figuras.html">Geometría</a></li>
+            <li><a href="descuentos.html">Procentajes</a></li>
+            <li><a href="ProMedMod.html">Estadística</a></li>
+            <li><a href="salario">Salario</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main class="container">
+      <h1>Figuras Geométricas</h1>
+      <p>Resultado del primer taller del curso práctico de JavaScript</p>
       <section class="flex">
         <article class="container__card color1">
           <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/icons/cuadrado.png" alt="cuadrado"/>
@@ -139,4 +152,5 @@
       <p>Desarrollo por<a href="https://github.com/carlosarturomt"> CarlosArturoMT</a></p>
     </article>
   </footer>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 </html>

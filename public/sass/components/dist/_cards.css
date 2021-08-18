@@ -139,6 +139,10 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
+.container__card--cover img {
+  width: 60%;
+  margin: 0 20%;
+}
 
 @media screen and (min-width: 600px) {
   .container__card {

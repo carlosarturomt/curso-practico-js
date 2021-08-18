@@ -98,7 +98,11 @@ function getModa() {
   } else {
     resultModa.innerHTML = "La Moda es ".concat(result[0][0], " se repite ").concat(result[0][1], " veces.");
     resultModa.classList.add('show');
-  }
+  } // if(result === 1){
+  //   resultModa.innerHTML = `Ningún dato se repite, no hay "Moda" aquí.`
+  //   resultModa.classList.add('show');
+  // }
+
 }
 
 console.groupEnd();

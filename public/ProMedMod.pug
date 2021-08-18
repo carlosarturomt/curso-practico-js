@@ -2,10 +2,10 @@ extend components/plantilla.pug
 block contenidos
   +head(titulos[2], "https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg", titulos[2]+" | WebMath")
   body 
-    header 
+    +header 
+    main.container
       h1=titulos[2]
       p Resultado del tercer taller del curso práctico de JavaScript
-    main.container
       section.flex
         //- P R O M E D I O - M E D I A N A - M O D A
         article.container__card.color1
@@ -21,6 +21,7 @@ block contenidos
               button(type="button" onclick="getAverage()") Promedio
               button(type="button" onclick="getMedian()") Mediana
               button(type="button" onclick="getModa()") Moda
+              button(type="button" onclick="location.reload();"): span.garbage
               p#resultAverage.w-100.hidden
               p#resultMedian.w-100.hidden
               p#resultModa.w-100.hidden

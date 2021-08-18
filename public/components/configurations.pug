@@ -38,6 +38,22 @@ mixin head(title, img, titlePage)
 			rel="stylesheet")
 		link(rel="icon" type="image/png" href="https://static.platzi.com/media/achievements/badge3-practico-javascript-d081180f-b158-446b-a34e-e658111a3680.png")
 		link(rel="stylesheet" href="../sass/dist/styles.css")
+		
+//- H E A D E R 
+mixin header() 
+	header 
+		nav(x-data="{ open: false }")
+			.flex: a(href="../../index") 
+				//- img(src="../assets/icons/calculator.png", alt="Logo")
+				p WebMath
+			.equiv(@click="open = true") &equiv;
+			.toggle(x-show="open" @click.away="open = false")
+				ul
+					li: a(href="figuras.html") Geometría
+					li: a(href="descuentos.html") Procentajes
+					li: a(href="ProMedMod.html") Estadística
+					li: a(href="salario") Salario
+
 //- C A R D - P O R T F O L I O 
 mixin card_portfolio(icon, title, date, image, url, github, text)
 	article.container__card
