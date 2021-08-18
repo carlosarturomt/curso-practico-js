@@ -92,7 +92,7 @@ function calcularAreaCuadrado(){
   resultCuadrado.classList.add('show');
   // alert("Área: " + area + valor + "²");
 }
-
+ 
 // Rectángulo
 function calcularPerimetroRectangulo(){
   const inputA = document.getElementById("inputRectanguloA");

@@ -10,7 +10,7 @@
     <meta name="copyright" content="carlosArturoMT"/>
     <meta name="description" content="Correspondiente al curso práctico de JavaScript de Platzi"/>
     <meta pproperty="og:site_name" content="JavaScript"/>
-    <meta property="og:title" content="Regla de Tres."/>
+    <meta property="og:title" content="Promedio, Mediana y Moda"/>
     <meta property="og:description" content="Correspondiente al curso práctico de JavaScript de Platzi"/>
     <meta property="og:image" content="https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg"/>
     <meta property="og:image:url" content="https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg"/>
@@ -19,7 +19,7 @@
     <meta itemprop="image" content="https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg"/>
     <meta name="twitter:image" content="https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg"/>
     <meta itemprop="image" content="https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg"/>
-    <title>Calculadora de Regla de Tres | WebMath</title>
+    <title>Promedio, Mediana y Moda | WebMath</title>
     <link rrel="image_src" href="https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
@@ -28,42 +28,41 @@
   </head>
   <body> 
     <header> 
-      <h1>Porcentajes y Descuentos</h1>
-      <p>Resultado del segundo taller del curso práctico de JavaScript</p>
+      <h1>Promedio, Mediana y Moda</h1>
+      <p>Resultado del tercer taller del curso práctico de JavaScript</p>
     </header>
     <main class="container">
       <section class="flex">
         <article class="container__card color1">
           <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/icons/calculator.png" alt="cuadrado"/>
             <hgroup> 
-              <h2>Regla de Tres</h2>
-              <h3>Calcular el precio con descuento</h3>
+              <h2>Calcular el </h2>
+              <h3>Promedio, Mediana y Moda</h3>
             </hgroup>
           </aside>
-          <form class="container__card--cover" action="" name="">
-            <label for="inputPrice">Escribe el precio de tu producto:</label>
-            <input class="w-100" id="inputPrice" type="number" placeholder="$$$"/>
-            <label for="inputDiscount">Escribe el descuento de tu producto</label>
-            <input class="w-100" id="inputDiscount" type="number" placeholder="Descuento%"/>
+          <form class="container__card--cover" action="" name="formStatistics">
+            <label for="inputStatistics">Escribe los números para calcular lo que necesites:</label>
+            <input class="w-100" id="inputStatistics" type="text" placeholder="1, 2, 3..."/>
             <aside>
-              <button type="button" onclick="onClickButtonPriceDiscount()">Calcular </button>
-              <p class="w-100" id="resultPrice"></p>
+              <button type="button" onclick="getAverage()">Promedio</button>
+              <button type="button" onclick="getMedian()">Mediana</button>
+              <button type="button" onclick="getModa()">Moda</button>
+              <p class="w-100 hidden" id="resultAverage"></p>
+              <p class="w-100 hidden" id="resultMedian"></p>
+              <p class="w-100 hidden" id="resultModa"></p>
             </aside>
           </form>
         </article>
         <article class="container__inf">
           <h2>¿Cómo se ha calculado esto?</h2>
-          <p>La<strong>regla de tres simple y directa </strong>consiste en una relación de cantidades con proporcionalidad directa, que se da cuando dadas dos cantidades correspondientes a magnitudes <strong>directamente proporcionales</strong>, se debe calcular la cantidad de una de estas magnitudes correspondiente a una cantidad dada de la otra magnitud.</p><img src="https://www.superprof.es/apuntes/wp-content/ql-cache/quicklatex.com-c80efb69f6f869fa548a525bb14c8e95_l3.png" alt="x=A² * C / A¹"/>
-          <p>La regla de tres directa la aplicaremos cuando entre las magnitudes se establecen las relaciones:</p>
-          <p>A más ➔ más.</p>
-          <p>A menos ➔ menos.</p>
-          <p>Es decir, cuando una magnitud aumenta la otra también lo hace, y si la magnitud disminuye la otra de igual forma.</p><br/>
-          <p>Referido de <a href="https://www.superprof.es/apuntes/escolar/matematicas/aritmetica/proporcionalidad/regla-de-tres-simple-y-directa.html" target="_blank" rel="noopener">https://www.superprof.es</a></p>
+          <p> <strong>Media aritmética o Promedio: </strong>Se suman todos los datos y se divide por la cantidad de datos.</p>
+          <p> <strong>Mediana: </strong>Se ordenan los datos de menor a mayor y la mediana es el dato intermedio, si son dos números intermedios; se saca el promedio de estos dos.</p>
+          <p> <strong>Moda: </strong>Es el dato que más se repite.</p>
         </article>
       </section>
     </main>
   </body>
-  <script src="../js/descuentos.js"></script>
+  <script src="../js/pro_med_mod.js"></script>
   <footer>
     <article> 
       <h5><span>&copy</span><span>2021</span><a href="https://platzi.com/clases/javascript-practico/" target="_blank" rel="noopener"> <span>CursoPraćticoJS</span></a></h5>

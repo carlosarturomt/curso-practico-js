@@ -12,3 +12,7 @@ Pasos:
 ## Taller #2 Porcentajes y Descuentos
 
 * Mismos pasos
+
+## Taller #3 Promedio, Mediana y Moda
+
+* Mismos pasos

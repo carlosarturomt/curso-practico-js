@@ -1,6 +1,6 @@
 extend components/plantilla.pug
 block contenidos
-  +head("Calcula Perímetros y Áreas.", "../assets/imgs/figuras.jpg", "Calculadora de Perímetros y Áreas | WebMath")
+  +head("Calcula Perímetros y Áreas.", "https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/figuras.jpg", "Calculadora de Perímetros y Áreas | WebMath")
   body 
     header 
       h1=titulos[0]
@@ -13,7 +13,7 @@ block contenidos
             img.container__card--header-photo(src="../assets/icons/cuadrado.png" alt="cuadrado")
             hgroup 
               h2 Cuadrado
-              h3 Calcula el área y perímetro
+              h3 Calcula el área y perímetro 
           form.container__card--cover(action="" name="formulCuadrado")
             label(for="inputCuadrado") ¿Cuánto mide cada lado de tu cuadrado?
             input#inputCuadrado.w-73(type="number")
