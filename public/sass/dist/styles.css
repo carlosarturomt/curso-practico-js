@@ -298,6 +298,10 @@ footer a:hover {
   background-image: url(../../assets/icons/bin.png);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .container h1 {
   font-size: 1.8rem;
   width: 90%;

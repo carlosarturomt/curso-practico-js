@@ -1,0 +1,53 @@
+extend components/plantilla.pug
+block contenidos
+  +head(titulos[3], "https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg", "Calculadora de Salarios | WebMath")
+  body 
+    +header 
+    main.container
+      h1=titulos[3]
+      p Resultado del cuarto taller del curso práctico de JavaScript
+      section.flex
+        //- S A L A R I O S 
+        article.container__card.color1
+          aside.container__card--header
+            img.container__card--header-photo(src="../assets/imgs/money.png" alt="cuadrado")
+            hgroup 
+              h2 Prima Vacacional
+              h3 Calcular vacaciones pagadas
+          form.container__card--cover(action="" name="formulPrima")
+            label(for="inputPrice") Escribe tu salario mensual:
+            input#inputPrimaV.w-100(type="number" placeholder="Lo que ganas al mes")
+            label(for="inputDiscount") Selecciona tu antigüedad:
+            select.w-100(name="añosTrabajando")
+              option(value="6") 1 año
+              option(value="8") 2 años
+              option(value="10") 3 años
+              option(value="12") 4 años
+              option(value="14") 5 a 9 años 
+              option(value="16") 10 a 14 años 
+              option(value="18") 15 a 19 años 
+              option(value="20") 20 a 24 años  
+              option(value="22") 25 a 29 años
+              option(value="24") 30 a 34 años
+            aside
+              button(type="button" onclick="calcularPrimaVacacional()") Calcular 
+              button(type="button" onclick="location.reload();"): span.garbage
+              p#resultPrimaV.w-100.hidden
+        article.container__inf
+          h2 ¿Prima Vacacional?
+          p Primero debes de saber lo siguiente: 
+          p La prima vacacional es un derecho que todo trabajador con contrato bajo la Ley Federal del Trabajo (LFT), tiene acceso. Según el artículo 80 de la LFT, la prima vacacional trata de lo siguiente:
+          p.text-center
+            strong “Los trabajadores tendrán derecho a una prima no menor de veinticinco por ciento sobre los salarios que les correspondan durante el período de vacaciones”.
+          p En otras palabras, la prima vacacional es una cantidad adicional de dinero que se paga para “el disfrute de las vacaciones”. Vale decir, una bonificación para que el trabajador o trabajadora tenga mejor pasar.
+          h2 ¿Cómo se ha calculado esto?
+          p Para saber la cantidad que te corresponde por la prima vacacional debes hacer una multiplicación. Esto es, tu salario diario multiplicado por los días de vacaciones y multiplicado por 0.25. Esta es la fórmula que estipula la ley y sabrás cuánto te corresponde.
+          p.text-center
+            strong SUELDO DIARIO X DÍAS DE VACACIONES X 0,25 = PRIMA VACACIONAL
+          br
+          p Referido de 
+            a(href="https://www.geovictoria.com/mx/prima-vacacional/" target="_blank" rel="noopener") https://www.geovictoria.com
+  
+  script(src="../js/prima_vacacional.js")
+  //- script(src="../js/salarios.js")
+  //- script(src="../js/analisis.js")
