@@ -7,17 +7,20 @@ block contenidos
       h1=titulos[3]
       p Resultado del cuarto taller del curso práctico de JavaScript
       section.flex
-        //- S A L A R I O S 
+        //- P R I M A  V A C A C I O N A L 
         article.container__card.color1
           aside.container__card--header
             img.container__card--header-photo(src="../assets/imgs/money.png" alt="cuadrado")
             hgroup 
               h2 Prima Vacacional
-              h3 Calcular vacaciones pagadas
+              h3 Adicional en tu Vacaciones
           form.container__card--cover(action="" name="formulPrima")
-            label(for="inputPrice") Escribe tu salario mensual:
-            input#inputPrimaV.w-100(type="number" placeholder="Lo que ganas al mes")
-            label(for="inputDiscount") Selecciona tu antigüedad:
+            label(for="") Escribe tu salario:
+            input#inputPrimaV.w-50(type="number" placeholder="$$$")
+            select.w-50(name="salarioDiario")
+              option(value="0") Salario Diario 
+              option(value="1") Mensual
+            label(for="") Selecciona tu antigüedad:
             select.w-100(name="añosTrabajando")
               option(value="6") 1 año
               option(value="8") 2 años
@@ -32,7 +35,31 @@ block contenidos
             aside
               button(type="button" onclick="calcularPrimaVacacional()") Calcular 
               button(type="button" onclick="location.reload();"): span.garbage
+              p#resultSalarioD.w-100.hidden
               p#resultPrimaV.w-100.hidden
+              p#resultPrimaV1.w-100.hidden
+
+        //- P R I M A  D O M I N I C A L 
+        article.container__card.color1
+          aside.container__card--header
+            img.container__card--header-photo(src="../assets/imgs/dollar.png" alt="cuadrado")
+            hgroup 
+              h2 Prima Dominical
+              h3 Adicional por trabajar en Domingo
+          form.container__card--cover(action="" name="formulPrimaD")
+            label(for="") Escribe tu salario:
+            input#inputPrimaD.w-50(type="number" placeholder="$$$")
+            select.w-50(name="salarioDiarioPD")
+              option(value="0") Salario Diario 
+              option(value="1") Mensual
+            label(for="inputDomingosT") Domingos trabajados:
+            input#inputDomingosT.w-100(type="number" placeholder="Cantidad")
+            aside
+              button(type="button" onclick="calcularPrimaDominical()") Calcular 
+              button(type="button" onclick="location.reload();"): span.garbage
+              p#resultSalarioD1.w-100.hidden
+              p#resultPrimaD.w-100.hidden
+              
         article.container__inf
           h2 ¿Prima Vacacional?
           p Primero debes de saber lo siguiente: 
@@ -47,6 +74,8 @@ block contenidos
           br
           p Referido de 
             a(href="https://www.geovictoria.com/mx/prima-vacacional/" target="_blank" rel="noopener") https://www.geovictoria.com
+          p Para la Prima Domical, se ha referido de 
+            a(href="https://www.dineroenimagen.com/tu-dinero/trabajas-en-domingo-esto-es-lo-que-te-corresponde-por-la-prima-dominical/131971" target="_blank" rel="noopener") https://www.dineroenimagen.com
   
   script(src="../js/prima_vacacional.js")
   //- script(src="../js/salarios.js")

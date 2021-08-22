@@ -37,7 +37,7 @@
             <li><a href="figuras.html">Geometría</a></li>
             <li><a href="descuentos.html">Procentajes</a></li>
             <li><a href="ProMedMod.html">Estadística</a></li>
-            <li><a href="salario">Salario</a></li>
+            <li><a href="salarios.html">Salario</a></li>
           </ul>
         </div>
       </nav>
@@ -50,13 +50,17 @@
           <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/imgs/money.png" alt="cuadrado"/>
             <hgroup> 
               <h2>Prima Vacacional</h2>
-              <h3>Calcular vacaciones pagadas</h3>
+              <h3>Adicional en tu Vacaciones</h3>
             </hgroup>
           </aside>
           <form class="container__card--cover" action="" name="formulPrima">
-            <label for="inputPrice">Escribe tu salario mensual:</label>
-            <input class="w-100" id="inputPrimaV" type="number" placeholder="Lo que ganas al mes"/>
-            <label for="inputDiscount">Selecciona tu antigüedad:</label>
+            <label for="">Escribe tu salario:</label>
+            <input class="w-50" id="inputPrimaV" type="number" placeholder="$$$"/>
+            <select class="w-50" name="salarioDiario">
+              <option value="0">Salario Diario </option>
+              <option value="1">Mensual</option>
+            </select>
+            <label for="">Selecciona tu antigüedad:</label>
             <select class="w-100" name="añosTrabajando">
               <option value="6">1 año</option>
               <option value="8">2 años</option>
@@ -72,7 +76,33 @@
             <aside>
               <button type="button" onclick="calcularPrimaVacacional()">Calcular </button>
               <button type="button" onclick="location.reload();"><span class="garbage"></span></button>
+              <p class="w-100 hidden" id="resultSalarioD"></p>
               <p class="w-100 hidden" id="resultPrimaV"></p>
+              <p class="w-100 hidden" id="resultPrimaV1"></p>
+            </aside>
+          </form>
+        </article>
+        <article class="container__card color1">
+          <aside class="container__card--header"><img class="container__card--header-photo" src="../assets/imgs/dollar.png" alt="cuadrado"/>
+            <hgroup> 
+              <h2>Prima Dominical</h2>
+              <h3>Adicional por trabajar en Domingo</h3>
+            </hgroup>
+          </aside>
+          <form class="container__card--cover" action="" name="formulPrimaD">
+            <label for="">Escribe tu salario:</label>
+            <input class="w-50" id="inputPrimaD" type="number" placeholder="$$$"/>
+            <select class="w-50" name="salarioDiarioPD">
+              <option value="0">Salario Diario </option>
+              <option value="1">Mensual</option>
+            </select>
+            <label for="inputDomingosT">Domingos trabajados:</label>
+            <input class="w-100" id="inputDomingosT" type="number" placeholder="Cantidad"/>
+            <aside>
+              <button type="button" onclick="calcularPrimaDominical()">Calcular </button>
+              <button type="button" onclick="location.reload();"><span class="garbage"></span></button>
+              <p class="w-100 hidden" id="resultSalarioD1"></p>
+              <p class="w-100 hidden" id="resultPrimaD"></p>
             </aside>
           </form>
         </article>
@@ -86,6 +116,7 @@
           <p>Para saber la cantidad que te corresponde por la prima vacacional debes hacer una multiplicación. Esto es, tu salario diario multiplicado por los días de vacaciones y multiplicado por 0.25. Esta es la fórmula que estipula la ley y sabrás cuánto te corresponde.</p>
           <p class="text-center"><strong>SUELDO DIARIO X DÍAS DE VACACIONES X 0,25 = PRIMA VACACIONAL</strong></p><br/>
           <p>Referido de <a href="https://www.geovictoria.com/mx/prima-vacacional/" target="_blank" rel="noopener">https://www.geovictoria.com</a></p>
+          <p>Para la Prima Domical, se ha referido de <a href="https://www.dineroenimagen.com/tu-dinero/trabajas-en-domingo-esto-es-lo-que-te-corresponde-por-la-prima-dominical/131971" target="_blank" rel="noopener">https://www.dineroenimagen.com</a></p>
         </article>
       </section>
     </main>
