@@ -282,6 +282,20 @@ footer a:hover {
   border: rgba(10, 10, 10, 0.493) solid 3px;
 }
 
+.normal {
+  background-color: transparent;
+}
+
+.careful {
+  background-color: orange;
+  color: white;
+}
+
+.danger {
+  background-color: red;
+  color: white;
+}
+
 .hidden {
   display: none;
 }

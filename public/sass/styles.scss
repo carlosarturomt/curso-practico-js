@@ -11,6 +11,20 @@
   border: $color__tenueOscuro solid 3px;
 }
 
+.normal {
+  background-color: transparent;
+}
+
+.careful {
+  background-color: orange;
+  color: white;
+}
+
+.danger {
+  background-color: red;
+  color: white;
+}
+
 .hidden {
   display: none;
 }
