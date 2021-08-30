@@ -1,0 +1,34 @@
+extend components/plantilla.pug
+block contenidos
+  +head("Índice de Masa Corporal.", "https://carlosarturomt.github.io/curso-practico-js/public/assets/imgs/regla3.jpg", "Calculadora de Índice de Masa Corporal | WebMath")
+  body 
+    +header 
+    main.container
+      h1=titulos[4]
+      p Resultado del segundo taller del curso práctico de JavaScript
+      section.flex
+        //- I N D I C E - D E - M A S A - C O R P O R A L
+        article.container__card.color1
+          aside.container__card--header
+            img.container__card--header-photo(src="../assets/imgs/bascula.png" alt="cuadrado")
+            hgroup 
+              h2 IMC
+              h3 Calcular Índice de Masa Corporal
+          form.container__card--cover(action="" name="")
+            label(for="inputWeight") Escribe tú peso:
+            input#inputWeight.w-100(type="number" placeholder="Ejemplo: 80kg")
+            label(for="inputHeight") Escribe tú altura/talla:
+            input#inputHeight.w-100(type="number" placeholder="Ejemplo: 1.80m")
+            aside
+              button(type="button" onclick="indiceMasaC()") Calcular 
+              p#resultIMC.w-100.hidden
+        article.container__inf
+          h2 ¿Cómo se ha calculado esto?
+          p La fórmula del IMC es el peso en kilógramos dividido por el cuadrado de la altura en metros (kg/m2).
+          p El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. El IMC es usado como uno de varios indicadores para evaluar el estado nutricional.
+          p El IMC constituye la medida poblacional más útil del sobrepeso y la obesidad, pues la forma de calcularlo no varía en función del sexo ni de la edad en la población adulta. No obstante, debe considerarse como una guía aproximativa, pues puede no corresponder al mismo grado de gordura en diferentes individuos.
+          br
+          p Referido de 
+            a(href="https://www.clinicalascondes.cl/CENTROS-Y-ESPECIALIDADES/Centros/Centro-de-Nutricion/Nutricion/Calculadora-IMC" target="_blank" rel="noopener") https://www.clinicalascondes.cl
+
+  script(src="../js/indice.js")
